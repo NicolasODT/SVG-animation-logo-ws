@@ -1,0 +1,71 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  background-color: #fff;
+}
+
+.st0 {
+  position: absolute;
+  fill: url(#0);
+  stroke: black;
+  stroke-width: 12;
+  animation: ttt 1s infinite;
+}
+
+#Calque_1 {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#Calque_1 path:nth-child(1) {
+  stroke-dasharray: 4000px;
+  stroke-dashoffset: 4000px;
+  animation: logo-anim 3s ease forwards;
+}
+
+@keyframes logo-anim {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+defs stop {
+  animation: colorsvg 3s forwards;
+}
+
+@keyframes colorsvg {
+  0% {
+    stop-color: transparent;
+  }
+  40% {
+    stop-color: transparent;
+  }
+  100% {
+    stop-color: 1;
+  }
+}
+
+svg {
+  width: 332px;
+  height: 357px;
+  animation: shadowsvg 0.8s forwards;
+  animation-delay: 2.5s;
+}
+
+@keyframes shadowsvg {
+  0% {
+    filter: none;
+  }
+  100% {
+    filter: drop-shadow(0px 10px 5px rgba(0, 0, 0, 0.4));
+    width: 502px;
+  }
+}
